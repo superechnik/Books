@@ -1,6 +1,5 @@
 .stack-work/
 log/
-.vscode/
 *~
 dist
 dist-*
