@@ -1,0 +1,13 @@
+cradle:
+  multi:
+    - path: "./"
+      config:
+        cradle:
+          stack:
+            - path: "./app/Main.hs"
+            - path: "./src"
+              component: "Books:lib"
+            - path: "/src/books"
+              component: "Books:lib"
+            - path: "./test/Spec.hs"
+
