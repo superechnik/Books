@@ -1,0 +1,14 @@
+import BookModel ( Book(Book) )
+import GHC.Generics ( Generic )
+import Data.ByteString.Lazy ( ByteString )
+import Data.Maybe ( fromMaybe )
+import Data.Aeson
+    ( FromJSON(parseJSON),
+      ToJSON(toJSON),
+      encode,
+      (.:?),
+      object,
+      Value(Object),
+      KeyValue((.=)) )
+import Database.Persist
+    ( PersistEntity(Key), entityIdToJSON, Entity(Entity) )

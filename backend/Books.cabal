@@ -1,0 +1,61 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: a259565e80448b0bd94f2238cea0a3a63b601e0f3b42373e5d0c288d9af0b1fb
+
+name:           Books
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/superechnik/Books#readme>
+homepage:       https://github.com/superechnik/Books#readme
+bug-reports:    https://github.com/superechnik/Books/issues
+author:         matthew
+maintainer:     rosenberg.matthew@gmail.com
+copyright:      TBD
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/superechnik/Books
+
+library
+  hs-source-dirs:      src/books
+                      ,src 
+  exposed-modules:     BookDatabase
+                     , BookModel
+                     , BookView
+                     , BookController
+                     , Router
+                     , BaseDatabase
+  ghc-options:         -ddump-minimal-imports -fwarn-unused-imports
+  build-depends:       base >= 4.7 && < 10
+                     , snap >= 0.14
+                     , text
+                     , hashmap
+                     , aeson
+                     , data-default-class
+                     , monad-control
+                     , monad-logger
+                     , resourcet
+                     , bytestring
+                     , transformers
+                     , persistent
+                     , persistent-sqlite
+                     , persistent-template
+  default-language:    Haskell2010
+
+executable Books-exe
+  hs-source-dirs:      app
+  main-is:             Main.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N -ddump-minimal-imports -fwarn-unused-imports
+  build-depends:       base
+                     , Books
+                     , snap >= 0.14
+  default-language:    Haskell2010
