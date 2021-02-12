@@ -1,11 +1,14 @@
 import './App.css';
 import './components/navBar';
 import NavBar from './components/navBar';
+import BookGrid from './components/Book/bookGrid';
+
 
 function App() {
   return (
     <div className="App">
         <NavBar />
+        <BookGrid />
      </div>
   );
 }
