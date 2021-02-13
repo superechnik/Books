@@ -3,10 +3,9 @@ import {
     Route,
     Switch,
   } from 'react-router-dom';
-  import React from 'react';
   import App from '../App'
 
-const Routes = () =>
+const Routes = (props:any) =>
     <Router>
         <div>
             <Switch>
