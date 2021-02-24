@@ -38,7 +38,7 @@ class BookGrid extends Component<{},State> {
   render() {
 
     return (
-      <div style={{ height: 400, width: '100%', color: 'whitesmoke' }}>
+      <div style={{height: 400, width: '100%', color: 'whitesmoke' }}>
         <DataGrid rows={this.state.books} columns={columns} pageSize={5} />
       </div>
     );
