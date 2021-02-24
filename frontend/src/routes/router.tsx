@@ -11,9 +11,9 @@ const Routes = (props:any) =>
             <Switch>
                 <Route path="/" component={App} />
                 <Route
-                path="/contact"
-                render={() => <h1>Contact Us</h1>} />
-                <Route render={() => <h1>Page not found</h1>} />
+                path="/stub"
+                render={() => <h1>This is a stub page</h1>} />
+                <Route render={() => <h1>There's nothing here!</h1>} />
             </Switch>
         </div>
     </Router>
