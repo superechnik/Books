@@ -45,6 +45,7 @@ booksRouteIndex = do
   -- Set the content type to Json
   -- We will be responding with Json
   modifyResponse $ setHeader "Content-Type" "application/json"
+  modifyResponse $ setHeader "Access-Control-Allow-Origin" "*"
   -- Write out the Json response
   writeLBS $ encode $ Prelude.map entityIdToJSON books
 
