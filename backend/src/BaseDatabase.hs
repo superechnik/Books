@@ -18,8 +18,6 @@ sqliteConnString = do
   maybeDbConnString <- lookupEnv "bookCollection_conn_string"
   return $ Data.Text.pack $ fromMaybe "bookCollection_default.db" maybeDbConnString
 
--- Needed for each database transaction (inserting, updating, retrieval, deleting)
-
 withDbRun :: SqlPersistT (NoLoggingT (ResourceT IO)) b -> IO b
 withDbRun command = do
   connString <- sqliteConnString
