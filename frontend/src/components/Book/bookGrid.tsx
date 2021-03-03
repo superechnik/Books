@@ -15,8 +15,8 @@ interface State {
 
 const columns = [
   { field: 'id', headerName: 'Id', width: 70 },
-  { field: 'title', headerName: 'Title', width: 130 },
-  { field: 'author', headerName: 'Author', width: 130},
+  { field: 'title', headerName: 'Title', width: 250 },
+  { field: 'author', headerName: 'Author', width: 300},
 ];
 
 
